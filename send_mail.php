@@ -1,15 +1,15 @@
 <?php
-$servername = "127.0.0.1";   //פה זה הפרטים של הדטה בייס שלי
-$username = "root";
-$password = "310234315";
-$dbname = "tutorial";
+$servername = "SERVER_IP";  
+$username = "USER_NAME";
+$password = "DB_PASSWORD";
+$dbname = "DB_NAME";
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);  //זה אני משדך שמות משתנה 
+$conn = new mysqli($servername, $username, $password, $dbname);  
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error); //בדיקת התחברות
+    die("Connection failed: " . $conn->connect_error); 
 } 
-$email_address =$_POST['email_address'];    // החלק הזה אומר לקחת את הפרטים שמשתמש הקליד ולהכניס לטבלה בשם פרסון שנמצאת בדטה בייס
+$email_address =$_POST['email_address'];    
 $first_name =$_POST['first_name'];
 $sql = "INSERT INTO person (email_address, first_name)
 VALUES ('$email_address', '$first_name')";
