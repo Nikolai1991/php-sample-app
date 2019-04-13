@@ -3,7 +3,7 @@
 This first bit sets the email address that you want the form to be submitted to.
 You will need to change this value to a valid email address that you can access.
  */
-$webmaster_email = "zionda123@gmail.com";
+$webmaster_email = "nikodavidov@gmail.com";
 
 /*
 This bit sets the URLs of the supporting pages.
@@ -25,10 +25,10 @@ $ppp = $_REQUEST['ppp'];
 $msg =
     "<table>
   <tr>
-   <th>שם</th>
-    <th>טלפון</th>
-       <th>דואר</th>
-              <th>ההודעה</th>
+   <th>name</th>
+    <th>phone</th>
+       <th>email</th>
+              <th>massage</th>
 
 
   </tr>
@@ -88,7 +88,7 @@ If you add a form field, you should add it here.
 else {
 
     $headers = "Content-Type: text/html;";
-    mail("$webmaster_email", "הודעה מהאתר", $msg, $headers);
+    mail("$webmaster_email", "massage", $msg, $headers);
 
     header("Location: $index");
 }
